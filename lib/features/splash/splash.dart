@@ -28,7 +28,7 @@ class SplashPage extends StatelessWidget {
                     size: 100,
                   ))),
           const Spacer(),
-          Text(AppLocalizations.of(context)!.translate('copyright')),
+          Text(AppLocalizations.of(context)!.translate('copyright'), style: TextStyle(fontWeight: FontWeight.w400, color: Colors.white)),
           const SizedBox(
             height: 20,
           ),

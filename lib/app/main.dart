@@ -70,7 +70,7 @@ class MyApp extends StatelessWidget {
               localeResolutionCallback: AppLocalizationsSetup.localeResolutionCallback,
               locale: state,
               theme: ThemeData(
-                fontFamily: 'Roboto',
+                fontFamily: 'NotoSans',
                 primaryColor: const Color(0xFF0DC8B6),
                 accentColor: const Color(0xFFFFA75A),
                 backgroundColor: const Color(0xFFE5E5E5),
@@ -87,7 +87,6 @@ class MyApp extends StatelessWidget {
                 colorScheme: ColorScheme.fromSwatch().copyWith(
                   error: const Color(0xFFFF0000),
                   primary: const Color(0xFF0DC8B6),
-
                 ),
               ),
             );
