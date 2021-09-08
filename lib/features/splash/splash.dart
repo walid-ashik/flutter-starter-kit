@@ -29,18 +29,7 @@ class SplashPage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const Spacer(),
-        Center(
-            child: InkWell(
-                onTap: () {
-                  if (AppLocalizations.of(context)!.isEnLocale) {
-                    BlocProvider.of<LocaleCubit>(context).toBangla();
-                  } else {
-                    BlocProvider.of<LocaleCubit>(context).toEnglish();
-                  }
-                },
-                child: FlutterLogo(
-                  size: 100,
-                ))),
+        buildLogo(context),
         const Spacer(),
         Text(AppLocalizations.of(context)!.translate('copyright'),
             style: TextStyle(fontWeight: FontWeight.w400, color: Colors.white)),
@@ -49,6 +38,21 @@ class SplashPage extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  Center buildLogo(BuildContext context) {
+    return Center(
+          child: InkWell(
+              onTap: () {
+                if (AppLocalizations.of(context)!.isEnLocale) {
+                  BlocProvider.of<LocaleCubit>(context).toBangla();
+                } else {
+                  BlocProvider.of<LocaleCubit>(context).toEnglish();
+                }
+              },
+              child: FlutterLogo(
+                size: 100,
+              )));
   }
 
   void _decideWhereToNavigate() {

@@ -89,12 +89,19 @@ class MyApp extends StatelessWidget {
                 hintColor: const Color(0xFFA9A7B8),
                 errorColor: const Color(0xFFFF0000),
                 focusColor: const Color(0xFF0066FF),
+                primaryTextTheme: TextTheme(
+                  //headline6 actually represents AppBar titleTextStyle
+                    headline6: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w900)
+                ),
                 appBarTheme: const AppBarTheme(
                     color: Colors.white,
                     elevation: 1,
                     brightness: Brightness.light,
                     centerTitle: false,
-                    toolbarTextStyle: TextStyle(
+                    titleTextStyle: TextStyle(
                         color: Colors.green,
                         fontSize: 16,
                         fontWeight: FontWeight.w900)),
